@@ -25,4 +25,7 @@ public class Enemy extends Npc
   public String getAttackName(){
    return attackName;
   }
+  public int getMagicWeakness(){
+  return magicWeakness;
+  }
 }
