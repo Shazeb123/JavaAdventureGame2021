@@ -17,4 +17,10 @@ public class Item
   private int strength;
   private String description;
   private int magicType;
+ 
+ public String getName()
+ {
+  return name;
+ }
+ 
 }
