@@ -11,5 +11,8 @@ Npc
 */
 public class Npc
 {
+  private String name;
+  private String speech;
+  private String description;
   
 }
