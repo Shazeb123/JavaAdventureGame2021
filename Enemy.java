@@ -13,4 +13,7 @@ public class Enemy extends Npc
   private int health;
   private int magicWeakness;
   private String attackName;
+  
+  public String getName(){
+    return Name;
 }
