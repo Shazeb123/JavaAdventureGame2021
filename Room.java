@@ -15,5 +15,12 @@ Room
 */
 public class Room
 {
-  
+  private String name;
+  private String description;
+  private Npc character;
+  private Item roomItem;
+  private Room north;
+  private Room south;
+  private Room east;
+  private Room west;
 }
