@@ -13,5 +13,8 @@ Item
  */
 public class Item
 {
-  
+  private String name;
+  private int strength;
+  private String description;
+  private int magicType;
 }
