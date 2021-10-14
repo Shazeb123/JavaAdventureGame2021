@@ -22,4 +22,7 @@ public class Enemy extends Npc
    speech = "";
    description = "";
   }
+  public String getAttackName(){
+   return attackName;
+  }
 }
