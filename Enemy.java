@@ -15,17 +15,19 @@ public class Enemy extends Npc
   private String attackName;
   
   public Enemy(){
-   health = 100;
-   magicWeakness = 1;
-   attackName = "SLASH";
-   name = "";
-   speech = "";
-   description = "";
+    health = 100;
+    magicWeakness = 1;
+    attackName = "SLASH";
+    name = "";
+    speech = "";
+    description = "";
   }
+  
   public String getAttackName(){
-   return attackName;
+    return attackName;
   }
+  
   public int getMagicWeakness(){
-  return magicWeakness;
+    return magicWeakness;
   }
 }
