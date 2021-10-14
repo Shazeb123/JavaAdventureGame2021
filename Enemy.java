@@ -13,4 +13,13 @@ public class Enemy extends Npc
   private int health;
   private int magicWeakness;
   private String attackName;
+  
+  public Enemy(){
+   health = 100;
+   magicWeakness = 1;
+   attackName = "SLASH";
+   name = "";
+   speech = "";
+   description = "";
+  }
 }
