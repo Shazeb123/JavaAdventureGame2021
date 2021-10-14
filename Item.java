@@ -18,10 +18,11 @@ public class Item
   private String description;
   private int magicType;
  
- public Item(){
-  name = "";
-  strength = 50;
-  description = "";
-  magicType = 1;
- }
+  public Item(){
+    name = "";
+    strength = 50;
+    description = "";
+    magicType = 1;
+  }
+  
 }
