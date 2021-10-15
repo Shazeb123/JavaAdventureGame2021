@@ -176,7 +176,7 @@ class Main {
 
     Item wand = new Item("wand", "A strange, glowing wand");
     if (rng.nextInt(2) == 0) {
-      billiardsRoom.setItem(wand);
+      billiardsRm.setItem(wand);
     } else {
       theBasement.setItem(wand);
     }
