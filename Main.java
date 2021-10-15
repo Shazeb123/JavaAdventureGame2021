@@ -222,7 +222,7 @@ class Main {
           System.out.println("There is nobody here to talk");
         }
       } else if (command.equals("fight")) {
-        playerHealth = fight(input, roomNpc, backpack, playerHealth, playerPunchStrength, playerKickStrength);
+        playerHealth = fight(input, rng, roomNpc, backpack, playerHealth, playerPunchStrength, playerKickStrength);
       } else if (command.equals("quit")) {
         System.out.println("Thanks for playing");
         break;
@@ -243,21 +243,23 @@ class Main {
   public static void takeItem(Room currentRoom, Item backpack) {
     if (backpack != null) {
       Item temp = backpack;
-      backpack = roomItem;
+      backpack = currentRoom.getItem();
       currentRoom.setItem(temp);
-      System.out.println("You drop " + temp + " and pick up " + roomItem + ".");
+      System.out.println("You drop " + temp + " and pick up " + backpack + ".");
+      
     } else {
       // not holding anything right now
-      backpack = roomItem;
-      System.out.println("You pick up " + roomItem + ".");
+      backpack = currentRoom.getItem();
       currentRoom.setItem(null);
+      System.out.println("You pick up " + backpack + ".");
+      
     }
   }
 
   /*
       fight with an enemy. returns the new playerHealth.
   */
-  public static void fight(Scanner input, Random rng, Npc currentNpc, Item backpack, int playerHealth, int playerPunchStrength, int playerKickStrength) {
+  public static int fight(Scanner input, Random rng, Npc currentNpc, Item backpack, int playerHealth, int playerPunchStrength, int playerKickStrength) {
     if (currentNpc == null) {
       System.out.println("There is nobody here to fight.");
       return playerHealth;
@@ -319,7 +321,7 @@ class Main {
     } else if (command.equals("x") && backpack != null) {
       System.out.println("You used " + backpack.getName().toUpperCase());
       attack = rng.nextInt(backpack.getStrength()) + rng.nextInt(backpack.getStrength()) + rng.nextInt(backpack.getStrength()) + 1;
-      if (backpack.getMagicType().equals(e.getMagicType())) {
+      if (backpack.getMagicType() == e.getMagicWeakness()) {
         attack = attack * 3;
       }
       if (attack >= 12) {
