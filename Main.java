@@ -9,6 +9,7 @@ Room
  - getLocationTo(String direction)
  - getName()
  - getPossibleDirections()
+ - linkRoom(Room r)
  - setCharacter(Npc character)
  - setDescription(String d)
  - setItem(Item i)
@@ -30,7 +31,7 @@ Enemy extends Npc
  - Enemy(String _name, String _description)
  - String getAttackName()
  - int getHealth
- - int getMagicType()
+ - int getMagicWeakness()
  - void loseHealth(int h)
  - void setAttackName()
 
