@@ -9,7 +9,7 @@ Room
  - getLocationTo(String direction)
  - getName()
  - getPossibleDirections()
- - linkRoom(Room r)
+ - linkRoom(Room r, String direction)
  - setCharacter(Npc character)
  - setDescription(String d)
  - setItem(Item i)
