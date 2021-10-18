@@ -24,7 +24,7 @@ public class Room
   private Room east;
   private Room west;
  
-  public String Name(){
+  public String getName(){
     return name;
  }
  
