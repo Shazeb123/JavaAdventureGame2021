@@ -25,10 +25,24 @@ public class Room
   private Room east;
   private Room west;
  
-  // sets the character to a Npc object that you inputed into this method
+
+
+
+  public String getName()
+  {
+    return name;
+  }
+  
+    // sets the character to a Npc object that you inputed into this method
   public setCharacter(Npc character)
   {
      this.character = character;
   }
+ 
+  public void setDescription(String newDescription)
+  {
+    this.description = newDescription;
+  }
+
 }
 
