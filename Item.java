@@ -25,6 +25,7 @@ public class Item
     magicType = 1;
   }
   
+
    public String getName()
    {
     return name;
@@ -40,8 +41,5 @@ public class Item
     description = _string;
    }
  
-
-
-  
 
 }
