@@ -24,6 +24,11 @@ public class Room
   private Room east;
   private Room west;
  
+  
+  public Room(){
+   this.description = "Living Room";
+   this.name = "Living Room";
+ }
   public String getName(){
     return name;
  }
