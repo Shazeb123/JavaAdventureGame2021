@@ -23,4 +23,9 @@ public class Item
   return name;
  }
  
+ public int getStrength()
+ {
+  return strength;
+ }
+ 
 }
