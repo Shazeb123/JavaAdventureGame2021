@@ -25,9 +25,21 @@ public class Item
     magicType = 1;
   }
   
-  public int getStrength()
-  {
-   return strength;
-  }
+
+   public String getName()
+   {
+    return name;
+   }
  
+   public int getStrength()
+   {
+    return strength;
+   }
+ 
+   public void setDescription(String _string)
+   {
+    description = _string;
+   }
+ 
+
 }

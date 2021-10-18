@@ -24,4 +24,15 @@ public class Room
   private Room south;
   private Room east;
   private Room west;
+ 
+  public String getName(){
+    return name;
+ }
+ 
+  public void setDescription(String newDescription){
+    this.description = newDescription;
+  }
+  
+ 
+ 
 }
