@@ -24,24 +24,14 @@ public class Item
     description = "";
     magicType = 1;
   }
+ public String getName(){
+  return name;
+ }
+ public int getMagicType(){
+  return magicType;
+ }
+ public int getStrength(){
+  return strength;
+ }
   
-   public String getName()
-   {
-    return name;
-   }
- 
-   public int getStrength()
-   {
-    return strength;
-   }
- 
-   public void setDescription(String _string)
-   {
-    description = _string;
-   }
- 
-
-
-  
-
 }
