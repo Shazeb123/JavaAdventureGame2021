@@ -78,9 +78,9 @@ class Main {
     kitchen.setDescription("A dank and dirty room buzzing with flies.");
     diningHall.setDescription("A large room with ornate golden decorations on each wall.");
     ballroom.setDescription("A vast room with a shiny wooden floor. Huge candlesticks guard the entrance.");
-    masterBedroom.setDescription("A Large Room with a massive been in the middle of it.");
+    masterBedroom.setDescription("A large room with a massive bed in the middle of it.");
     grandFoyer.setDescription("The entrance to the dark mansion. Designed to astonish guests. The hallway is north and there is are large, double-doors to the west.");
-    mainHallway.setDescription("a long dark hall that has creepy paintings on the walls");
+    mainHallway.setDescription("A long dark hall that has creepy paintings on the walls");
     theStudy.setDescription("");
     billiardsRm.setDescription("");
     theBasement.setDescription("");
