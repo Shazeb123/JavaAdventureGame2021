@@ -109,7 +109,7 @@ public class Main
     masterBedroom.linkRoom(theBasement, "west");
     // create characters
     // Ava
-    Enemy ava = new Enemy("Ava", "A beautiful chicken");
+    Enemy ava = new Enemy("Ava", "a beautiful chicken");
     ava.setSpeech("Hello...");
     ava.setAttackName("PECK");
     if(rng.nextInt(2) == 0)
