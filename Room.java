@@ -28,6 +28,9 @@ public class Room
     return name;
  }
  
+  public void setDescription(String newDescription){
+    this.description = newDescription;
+  }
   
  
  
