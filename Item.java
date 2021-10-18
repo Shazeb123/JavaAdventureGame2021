@@ -18,11 +18,17 @@ public class Item
   private String description;
   private int magicType;
  
-  public Item(){
+  public Item()
+  {
     name = "";
     strength = 50;
     description = "";
     magicType = 1;
   }
   
+ public void setDescription(String _string)
+  {
+   description = _string;
+  }
+ 
 }
