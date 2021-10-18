@@ -29,7 +29,11 @@ public class Room
    this.description = "Living Room";
    this.name = "Living Room";
  }
-  
+  public String getName(){
+    return name;
+ }
+ 
+ 
   
  
  
