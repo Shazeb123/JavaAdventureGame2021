@@ -32,6 +32,10 @@ public class Room
   public String getName(){
     return name;
  }
+  public void setDescription(String newDescription){
+    this.description = newDescription;
+  }
+  
  
  
   
