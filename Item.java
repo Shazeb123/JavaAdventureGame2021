@@ -25,4 +25,9 @@ public class Item
     magicType = 1;
   }
   
+  public int getStrength()
+  {
+   return strength;
+  }
+ 
 }
