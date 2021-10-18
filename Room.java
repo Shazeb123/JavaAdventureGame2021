@@ -23,4 +23,12 @@ public class Room
   private Room south;
   private Room east;
   private Room west;
+ 
+  public String Name(){
+    return name;
+ }
+ 
+  
+ 
+ 
 }
