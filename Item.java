@@ -18,19 +18,30 @@ public class Item
   private String description;
   private int magicType;
  
- public String getName()
- {
-  return name;
- }
+  public Item(){
+    name = "";
+    strength = 50;
+    description = "";
+    magicType = 1;
+  }
+  
+   public String getName()
+   {
+    return name;
+   }
  
- public int getStrength()
- {
-  return strength;
- }
+   public int getStrength()
+   {
+    return strength;
+   }
  
- public void setDescription(String _string)
- {
-  description = _string;
- }
+   public void setDescription(String _string)
+   {
+    description = _string;
+   }
  
+
+
+  
+
 }

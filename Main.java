@@ -9,6 +9,7 @@ Room
  - getLocationTo(String direction)
  - getName()
  - getPossibleDirections()
+ - linkRoom(Room r, String direction)
  - setCharacter(Npc character)
  - setDescription(String d)
  - setItem(Item i)
@@ -30,7 +31,7 @@ Enemy extends Npc
  - Enemy(String _name, String _description)
  - String getAttackName()
  - int getHealth
- - int getMagicType()
+ - int getMagicWeakness()
  - void loseHealth(int h)
  - void setAttackName()
 
@@ -77,9 +78,9 @@ class Main {
     kitchen.setDescription("A dank and dirty room buzzing with flies.");
     diningHall.setDescription("A large room with ornate golden decorations on each wall.");
     ballroom.setDescription("A vast room with a shiny wooden floor. Huge candlesticks guard the entrance.");
-    masterBedroom.setDescription("");
+    masterBedroom.setDescription("A large room with a massive bed in the middle of it.");
     grandFoyer.setDescription("The entrance to the dark mansion. Designed to astonish guests. The hallway is north and there is are large, double-doors to the west.");
-    mainHallway.setDescription("");
+    mainHallway.setDescription("A long dark hall that has creepy paintings on the walls");
     theStudy.setDescription("");
     billiardsRm.setDescription("");
     theBasement.setDescription("");
@@ -175,7 +176,7 @@ class Main {
 
     Item wand = new Item("wand", "A strange, glowing wand");
     if (rng.nextInt(2) == 0) {
-      billiardsRoom.setItem(wand);
+      billiardsRm.setItem(wand);
     } else {
       theBasement.setItem(wand);
     }
@@ -221,7 +222,7 @@ class Main {
           System.out.println("There is nobody here to talk");
         }
       } else if (command.equals("fight")) {
-        playerHealth = fight(input, roomNpc, backpack, playerHealth, playerPunchStrength, playerKickStrength);
+        playerHealth = fight(input, rng, roomNpc, backpack, playerHealth, playerPunchStrength, playerKickStrength);
       } else if (command.equals("quit")) {
         System.out.println("Thanks for playing");
         break;
@@ -242,21 +243,23 @@ class Main {
   public static void takeItem(Room currentRoom, Item backpack) {
     if (backpack != null) {
       Item temp = backpack;
-      backpack = roomItem;
+      backpack = currentRoom.getItem();
       currentRoom.setItem(temp);
-      System.out.println("You drop " + temp + " and pick up " + roomItem + ".");
+      System.out.println("You drop " + temp + " and pick up " + backpack + ".");
+      
     } else {
       // not holding anything right now
-      backpack = roomItem;
-      System.out.println("You pick up " + roomItem + ".");
+      backpack = currentRoom.getItem();
       currentRoom.setItem(null);
+      System.out.println("You pick up " + backpack + ".");
+      
     }
   }
 
   /*
       fight with an enemy. returns the new playerHealth.
   */
-  public static void fight(Scanner input, Random rng, Npc currentNpc, Item backpack, int playerHealth, int playerPunchStrength, int playerKickStrength) {
+  public static int fight(Scanner input, Random rng, Npc currentNpc, Item backpack, int playerHealth, int playerPunchStrength, int playerKickStrength) {
     if (currentNpc == null) {
       System.out.println("There is nobody here to fight.");
       return playerHealth;
@@ -318,7 +321,7 @@ class Main {
     } else if (command.equals("x") && backpack != null) {
       System.out.println("You used " + backpack.getName().toUpperCase());
       attack = rng.nextInt(backpack.getStrength()) + rng.nextInt(backpack.getStrength()) + rng.nextInt(backpack.getStrength()) + 1;
-      if (backpack.getMagicType().equals(e.getMagicType())) {
+      if (backpack.getMagicType() == e.getMagicWeakness()) {
         attack = attack * 3;
       }
       if (attack >= 12) {
