@@ -28,4 +28,9 @@ public class Item
   return strength;
  }
  
+ public void setDescription(String _string)
+ {
+  description = _string;
+ }
+ 
 }
