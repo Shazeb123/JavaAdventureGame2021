@@ -24,4 +24,11 @@ public class Room
   private Room south;
   private Room east;
   private Room west;
+ 
+  // sets the character to a Npc object that you inputed into this method
+  public setCharacter(Npc character)
+  {
+     this.character = character;
+  }
 }
+
