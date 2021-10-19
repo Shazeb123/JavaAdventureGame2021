@@ -17,4 +17,34 @@ public class Item
   private int strength;
   private String description;
   private int magicType;
+ 
+  public Item()
+  {
+    name = "";
+    strength = 50;
+    description = "";
+    magicType = 1;
+  }
+
+  public int getMagicType()
+  {
+    return magicType;
+  }
+
+  public String getName()
+  {
+    return name;
+  }
+
+  public int getStrength()
+  {
+    return strength;
+  }
+
+  public void setDescription(String _string)
+  {
+    description = _string;
+  }
+ 
+
 }

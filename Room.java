@@ -7,6 +7,7 @@ Room
  - getLocationTo(String direction)
  - getName()
  - getPossibleDirections()
+ - linkRoom(Room r, String direction)
  - setCharacter(Npc character)
  - setDescription(String d)
  - setItem(Item i)
@@ -24,6 +25,7 @@ public class Room
   private Room east;
   private Room west;
  
+
   
   public Room(){
     this.description = "Living Room";
@@ -36,11 +38,20 @@ public class Room
   
   public void setDescription(String newDescription){
     this.description = newDescription;
+
   }
   
+  // sets the character to a Npc object that you inputed into this method
+  public setCharacter(Npc character)
+  {
+     this.character = character;
+  }
  
- 
-  
- 
- 
+  public void setDescription(String newDescription)
+  {
+    this.description = newDescription;
+  }
+
+
 }
+
