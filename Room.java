@@ -26,12 +26,14 @@ public class Room
  
   
   public Room(){
-   this.description = "Living Room";
-   this.name = "Living Room";
- }
+    this.description = "Living Room";
+    this.name = "Living Room";
+  }
+  
   public String getName(){
     return name;
- }
+  }
+  
   public void setDescription(String newDescription){
     this.description = newDescription;
   }
